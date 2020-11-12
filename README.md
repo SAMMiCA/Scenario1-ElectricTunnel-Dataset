@@ -2,10 +2,32 @@
 UE4-based electric tunnel environments and data (RGBD, Lidar, IMU, etc.) collection scripts.
 
 ## Download dataset (rosbag file for each map)
+  
+  **Data description**
+  
+  Total 5 electric tunnel environments were built, each with distinctive tunnel shape, electric wire shape, wall and floor texture, and objects arrangement. Each environment is named as "MAP****_origin" and the changed version is named as "MAP****_change". Every environment is saved in the form of rosbag file, which contains all necessary information to explore the environment.
+  
+  **Contents in the rosbag file**
+  
+  - Current location
 
+  **Difference between the original and changed environment**
+  
+  There are several differences between the original and changed environment. The basic structure of the tunnel including tunnel shape, electric wire, and wall and floor texture remains the same. But the situation in the tunnel such as objects arrangement or emergencies are mainly changed.
+
+  - Change of the object location
+    - Fall of fire extinguishers, lamps and warning signs
+    - Translation or rotation of boxes and tanks
+    - Generation of unkown objects such as wires, boxes, and even human
+    
+  - Emegencies
+    - Fire, smoke and heat
+  
+  **Download Links**
+  
 <p float="left">
-  <img src="fig/map0001_origin.png" width="300" />
-  <img src="fig/map0001_change.png" width="300" /> 
+  <img src="fig/map0001_origin.png" width="360" />
+  <img src="fig/map0001_change.png" width="360" /> 
 </p>
 
   - [MAP0001_origin](https://drive.google.com/file/d/1_pSUbwMq98T1dgtgCeEd-ToUY7fZxlgm/view?usp=sharing, "MAP0001_origin") (1.15GB) 
@@ -15,8 +37,8 @@ UE4-based electric tunnel environments and data (RGBD, Lidar, IMU, etc.) collect
   - [MAP0002_change](https://drive.google.com/file/d/1rb7YVnYf7q-Y6M_5wWIRcSswI86kJ9SD/view?usp=sharing, "MAP0002_change") (0.57GB)
 
 <p float="left">
-  <img src="fig/map0003_origin.png" width="300" />
-  <img src="fig/map0003_change.png" width="300" /> 
+  <img src="fig/map0003_origin.png" width="360" />
+  <img src="fig/map0003_change.png" width="360" /> 
 </p>
   
   - [MAP0003_origin](https://drive.google.com/file/d/1fh94qG18Mayj5fE4xJ-gy9nhYKexIWoy/view?usp=sharing, "MAP0003_origin") (1.45GB)
