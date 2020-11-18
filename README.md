@@ -9,7 +9,18 @@ UE4-based electric tunnel environments and data (RGBD, Lidar, IMU, etc.) collect
   
   **Contents in the rosbag file**
   
-  - Current location
+  In rosbag file, various types of information helps exploring the electric tunnel environments is stored.
+  
+  - tf
+  - Camera
+    - Camera information
+    - Rectified RGB image
+    - Depth information
+  - RTABMAP
+    - Odometry information
+    - Landmarks
+    - OctoMap
+    - Cloud map
 
   **Difference between the original and changed environment**
   
@@ -67,17 +78,42 @@ UE4-based electric tunnel environments and data (RGBD, Lidar, IMU, etc.) collect
   
 ## Play with data
 
-  -T.B.U. 
+  Run follwing commands to visualize the information in the rosbag file.
 
+  ```
+  # new terminal
+  source Airsim/ros/devel/setup.bash
+  roslaunch rtabmap_ros rgbd_mapping.launch
+  rosbag play map****_origin.bag
+  ```
+  
+  Then the RTABMAP results will pop up as shown below.
+  
 ## Create your own dataset
 
-  **1.** Environment setup
-    - Follow instruction [here](https://github.com/SAMMiCA/Scenario1-3D-Change-Detection/edit/main/README.md)
-
-  **2.** Build electric tunnel with UE4
-    - Purchase 
-    - Tutorial
-    
-  **3.** Run AirSim on the project
+  **1. Environment setup (Install ROS, UE4, Airsim, RTABMAP, etc)**
   
-  **4.** Open new terminal
+  - Follow instructions [here](https://github.com/SAMMiCA/Scenario1-3D-Change-Detection/blob/main/README.md)
+
+  **2. Build electric tunnel project with UE4**
+  
+   - Purchase and download maps from UE4 Epic Game Launcher
+   - Tutorials [YouTube](https://www.youtube.com/watch?v=mKRrLJ4kmFE)
+    
+  **3. Run AirSim on the project**
+  
+  **4. Open new terminals**
+  
+   ```
+   # new terminal for roscore
+   roscore
+   
+   # new terminal for ros topics
+   cd AirSim/PythonClient/car; python kinect_publisher_car.py
+   
+   # new terminal for RTABMAP
+   source Airsim/ros/devel/setup.bash; roslaunch rtabmap_ros rgbd_mapping.launch
+   
+   # new terminal for saving
+   rosbag record -a
+   ```
