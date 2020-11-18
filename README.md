@@ -89,6 +89,11 @@ UE4-based electric tunnel environments and data (RGBD, Lidar, IMU, etc.) collect
   
   Then the RTABMAP results will pop up as shown below.
   
+  <p float="center">
+    <img src="fig/rosbagplay.png" width="720" />
+  </p>
+
+  
 ## Create your own dataset
 
   **1. Environment setup (Install ROS, UE4, Airsim, RTABMAP, etc)**
@@ -117,3 +122,22 @@ UE4-based electric tunnel environments and data (RGBD, Lidar, IMU, etc.) collect
    # new terminal for saving
    rosbag record -a
    ```
+   
+ # Citations
+ 
+ Please consider citing this project in your publications if it helps your research. The following is a BibTeX reference. The BibTeX entry requires the url LaTeX package.
+ 
+ ```
+ @misc{park2020change,
+ author = {Park, Jinman and Yoo, Sangmin and Lee, Sunkyung and Jang, Jaehyuk},
+ title = {{3D change Detection using image resynthesis from 3D mapping in underground environments}},
+ year = {2020},
+ publisher = {GitHub},
+ journal = {GitHub repository},
+ howpublished = {\url{https://github.com/SAMMiCA/Scenario1-3D-Change-Detection}}
+ }
+ ```
+ 
+# Acknowledgement
+
+This work was supported by Institute of Information & communications Technology Planning & Evaluation(IITP) grant funded by Korea government(MSIT) (No.2020-0-00440, Development of Artificial Intelligence Technology that Continuously Improves Itself as the Situation Changes in the Real World)
